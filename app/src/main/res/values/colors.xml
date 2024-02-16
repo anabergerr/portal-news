@@ -5,4 +5,6 @@
     <color name="economy_color">#7D3AF3</color>
     <color name="politic_color">#F33AF0</color>
     <color name="sport_color">#4CAF50</color>
+    <color name="positive_variation">#4CAF50</color>
+    <color name="negative_variation">#D60606</color>
 </resources>

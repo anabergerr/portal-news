@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.portalhtk.NewsFragment"
+        android:name="com.example.portalhtk.StockFragment"
         android:layout_width="453dp"
         android:layout_height="657dp"
         tools:layout_editor_absoluteX="-21dp"

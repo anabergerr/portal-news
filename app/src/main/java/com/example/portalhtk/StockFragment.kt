@@ -8,30 +8,30 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class NewsFragment: Fragment() {
+class StockFragment: Fragment() {
 
-    private  lateinit var mRecycleView: RecyclerView
+    private lateinit var mRecyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_news, container, false)
+        return inflater.inflate(R.layout.fragment_stock, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mRecycleView = view.findViewById(R.id.news_recycler_view)
-        mRecycleView.layoutManager = LinearLayoutManager(context)
+        mRecyclerView = view.findViewById(R.id.stock_recycler_view)
+        mRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onStart() {
         super.onStart()
-        val newsList = NewsDatabase.findAll().shuffled()
-        val newsAdapter = NewsAdapter(newsList)
-        mRecycleView.adapter = newsAdapter
-        newsAdapter.notifyDataSetChanged()
+
+        val stockAdapter = StockAdapter(StockDatabase.findAll())
+        mRecyclerView.adapter = stockAdapter
+        stockAdapter.notifyDataSetChanged()
     }
 }
